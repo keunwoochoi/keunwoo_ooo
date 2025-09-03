@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keunwoo.OOO</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://keunwoo.ooo/">
+    <meta property="og:title" content="keunwoo.OOO">
+    <meta property="og:description" content="Links to my music and social media">
+    <meta property="og:image" content="profile.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://keunwoo.ooo/">
+    <meta property="twitter:title" content="keunwoo.OOO">
+    <meta property="twitter:description" content="Links to my music and social media">
+    <meta property="twitter:image" content="profile.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="profile.jpeg">
+    <link rel="apple-touch-icon" href="profile.jpeg">
+
+    <!-- Sleek font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --ink:#4b5563;            /* gray-600 - lighter than before */
+            --ink-muted:#6b7280;      /* gray-500 */
+            --ink-subtle:#9ca3af;     /* gray-400 */
+            --border:#d1d5db;         /* gray-300 - much lighter borders */
+            --bg:#ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            padding: 24px;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 640px; margin: 0 auto; text-align: center; }
+
+        .avatar {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            margin: 8px auto 20px;
+            display: block;
+            object-fit: cover;
+            /* no border or shadow per request */
+            border: none;
+            box-shadow: none;
+        }
+
+        .title {
+            font-size: 2.1rem;
+            font-weight: 500;         /* reduced from 600 to 500 for slimmer look */
+            letter-spacing: 0.4px;    /* increased letter spacing for elegance */
+            margin-bottom: 8px;
+            color: var(--ink);
+        }
+
+        .bio { margin-bottom: 32px; color: var(--ink-muted); }
+
+        .links { display: flex; flex-direction: column; gap: 14px; margin: 0 6px 40px; }
+
+        .link-button {
+            display: block;
+            padding: 14px 18px;
+            background-color: var(--bg);
+            border: 1px solid var(--border); /* thinner border */
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--ink);
+            font-weight: 400;         /* reduced from 500 to 400 for slimmer look */
+            letter-spacing: 0.2px;    /* added letter spacing for elegance */
+            transition: background-color .2s ease, color .2s ease, transform .1s ease, box-shadow .2s ease;
+            text-align: center;
+        }
+
+        .link-button:hover { 
+            background-color: var(--ink); 
+            color: #fff; 
+            transform: translateY(-1px); 
+            box-shadow: 0 6px 18px rgba(75,85,99,.15); /* updated shadow color */
+        }
+        .link-button:active { transform: translateY(0); }
+
+        .social-links { display: flex; justify-content: center; gap: 22px; margin: 32px 0 12px; }
+        .social-link { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+        .social-link svg { width: 22px; height: 22px; stroke: var(--ink); }
+        .social-link:hover svg { stroke: var(--border); }
+
+        .footer { margin-top: 8px; color: var(--ink-subtle); font-size: 0.92rem; }
+        .footer a { color: var(--ink-subtle); text-decoration: none; }
+        .footer a:hover { color: var(--ink); }
+
+        @media (max-width: 480px) {
+            body { padding: 18px; }
+            .avatar { width: 104px; height: 104px; }
+            .title { font-size: 1.7rem; }
+            .link-button { padding: 13px 14px; font-size: 0.96rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpeg" alt="keunwoo.OOO" class="avatar">
+            <h1 class="title">keunwoo.OOO</h1>
+            <p class="bio">Links to my music and social media</p>
+        </header>
+
+        <main>
+            <div class="links">
+                <a href="https://instagram.com/keunwoo.ooo" target="_blank" class="link-button">📸 my instagram 📸</a>
+                <a href="https://keunwooooo.bandcamp.com/" target="_blank" class="link-button">⛺️⛺️ my bandcamp ⛺️</a>
+                <a href="https://keunwoochoi.github.io/" target="_blank" class="link-button">Keunwoo as an AI researcher</a>
+                <a href="https://open.spotify.com/embed/track/3frO2xUg806mY18IqVjcUl?si=d1f7ceca30134ac7" target="_blank" class="link-button">💚 Listen at Spotify</a>
+                <a href="https://music.apple.com/us/album/you-and-i-single/1766447285" target="_blank" class="link-button">🍎 at Apple Music</a>
+                <a href="https://youtu.be/N-R9QF888i8?si=wSGGjzxLo4Lkkgsk" target="_blank" class="link-button">▶️ YouTube</a>
+                <a href="https://music.amazon.com/albums/B0DG231NZN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_FuDo6HWSauZwBQnIZl2uXREHk" target="_blank" class="link-button">➡️ Amazon Music</a>
+                <a href="https://deezer.page.link/QkbPdtngJttPv9rE7" target="_blank" class="link-button">💜 Deezer</a>
+                <a href="https://www.melon.com/album/detail.htm?albumId=11586732" target="_blank" class="link-button">🍈 멜론에서 듣기</a>
+                <a href="https://www.music-flo.com/detail/album/428595876/albumtrack" target="_blank" class="link-button">🌊 FLO에서 듣기</a>
+                <a href="https://vibe.naver.com/track/87013102" target="_blank" class="link-button">🎛️ 네이버 바이브</a>
+                <a href="https://music.bugs.co.kr/album/20669005" target="_blank" class="link-button">♥️ 벅스뮤직</a>
+                <a href="https://www.genie.co.kr/detail/albumInfo?axnm=85567587" target="_blank" class="link-button">💙 지니뮤직</a>
+            </div>
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="mailto:gnuchoi@gmail.com" class="social-link" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+                        <path d="m22 8-10 6L2 8"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/keunwoo.ooo" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <path d="M17.5 6.5h.01"/>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UC6WGQvwwM3M7sX98zJ14XPA" class="social-link" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 2A29.94 29.94 0 0 0 1 12a29.94 29.94 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 2C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-2A29.94 29.94 0 0 0 23 12a29.94 29.94 0 0 0-.46-5.58z"/>
+                        <path d="m10 15 5.19-3L10 9v6z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- footer text removed per request -->
+        </footer>
+    </div>
+</body>
+</html>
