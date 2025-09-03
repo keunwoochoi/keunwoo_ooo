@@ -41,11 +41,33 @@
             background-color: var(--bg);
             color: var(--ink);
             line-height: 1.6;
-            padding: 24px;
+            padding: 0;
             min-height: 100vh;
         }
 
-        .container { max-width: 640px; margin: 0 auto; text-align: center; }
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 24px;
+        }
+
+        /* Section Backgrounds */
+        .section-white {
+            background-color: #ffffff;
+            padding: 40px 0;
+        }
+
+        .section-gray {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .section-content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
         .avatar {
             width: 128px;
@@ -72,7 +94,7 @@
         .links { display: flex; flex-direction: column; gap: 14px; margin: 0 6px 40px; }
 
         .section-header {
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             font-weight: 500;
             color: var(--ink-muted);
             text-transform: uppercase;
@@ -83,6 +105,97 @@
 
         .section-header:first-child {
             margin-top: 0;
+        }
+
+        /* Grid Layout for Songs */
+        .songs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 20px 0;
+        }
+
+        .song-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .song-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .song-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .song-player {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        .song-metadata {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--ink-muted);
+            text-align: left;
+        }
+
+        .streaming-section {
+            margin-bottom: 20px;
+        }
+
+        .streaming-title {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--ink-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .streaming-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .song-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--ink);
+            font-weight: 400;
+            font-size: 0.85rem;
+            letter-spacing: 0.1px;
+            transition: all 0.2s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .song-link:hover {
+            background-color: var(--ink);
+            color: #fff;
+            transform: translateY(-1px);
         }
 
         .link-button {
@@ -136,26 +249,262 @@
             <div class="links">
                 <!-- Personal Links -->
                 <a href="https://instagram.com/keunwoo.ooo" target="_blank" class="link-button">📸 my instagram 📸</a>
-                <a href="https://keunwooooo.bandcamp.com/" target="_blank" class="link-button">⛺️⛺️ my bandcamp ⛺️</a>
+                <a href="https://keunwooooo.bandcamp.com/" target="_blank" class="link-button">⛺️ my bandcamp ⛺️</a>
                 <a href="https://keunwoochoi.github.io/" target="_blank" class="link-button">Keunwoo as an AI researcher</a>
-                
-                <!-- Global Streaming Services for "you and i" -->
-                <h2 class="section-header">Listen to 'you and i'</h2>
-                <a href="https://open.spotify.com/embed/track/3frO2xUg806mY18IqVjcUl?si=d1f7ceca30134ac7" target="_blank" class="link-button">💚 Listen at Spotify</a>
-                <a href="https://music.apple.com/us/album/you-and-i-single/1766447285" target="_blank" class="link-button">🍎 at Apple Music</a>
-                <a href="https://youtu.be/N-R9QF888i8?si=wSGGjzxLo4Lkkgsk" target="_blank" class="link-button">▶️ YouTube</a>
-                <a href="https://music.amazon.com/albums/B0DG231NZN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_FuDo6HWSauZwBQnIZl2uXREHk" target="_blank" class="link-button">➡️ Amazon Music</a>
-                <a href="https://deezer.page.link/QkbPdtngJttPv9rE7" target="_blank" class="link-button">💜 Deezer</a>
-                
-                <!-- Korean Streaming Services for "you and i" -->
-                <h2 class="section-header">싱글 'you and i' 듣기</h2>
-                <a href="https://www.melon.com/album/detail.htm?albumId=11586732" target="_blank" class="link-button">🍈 멜론에서 듣기</a>
-                <a href="https://www.music-flo.com/detail/album/428595876/albumtrack" target="_blank" class="link-button">🌊 FLO에서 듣기</a>
-                <a href="https://vibe.naver.com/track/87013102" target="_blank" class="link-button">🎛️ 네이버 바이브</a>
-                <a href="https://music.bugs.co.kr/album/20669005" target="_blank" class="link-button">♥️ 벅스뮤직</a>
-                <a href="https://www.genie.co.kr/detail/albumInfo?axnm=85567587" target="_blank" class="link-button">💙 지니뮤직</a>
             </div>
         </main>
+    </div>
+
+    <!-- Music Section -->
+    <div class="section-gray">
+        <div class="section-content">
+            <h2 class="section-header">My Music</h2>
+            <div class="songs-grid">
+                <!-- Song Card: you and i -->
+                <div class="song-card">
+                    <h3 class="song-title">you and i (2024)</h3>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/N-R9QF888i8" title="you and i - YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>Released September 9, 2024</strong></p>
+                        <p>Piano edited and performed by <a href="https://www.hayounglyou.com/" target="_blank" style="color: var(--ink-muted); text-decoration: underline;">Hayoung Lyou</a></p>
+                        <p>Vocal consulting by Edward Staunton</p>
+                        <p>Vocal recording by Andrew Cheong</p>
+                        <p>Mastered by Seung-jae Kim at OU:RE Studio</p>
+                        <p>All the others by keunwoo.OOO</p>
+                        <p>Album cover art by Samsoopil</p>
+                    </div>
+
+                    <div class="streaming-section">
+                        <h4 class="streaming-title">Streaming Services</h4>
+                        <div class="streaming-buttons">
+                            <a href="https://open.spotify.com/embed/track/3frO2xUg806mY18IqVjcUl?si=d1f7ceca30134ac7" target="_blank" class="song-link">Spotify</a>
+                            <a href="https://keunwooooo.bandcamp.com/album/you-and-i" target="_blank" class="song-link">Bandcamp</a>
+                            <a href="https://music.apple.com/us/album/you-and-i-single/1766447285" target="_blank" class="song-link">Apple</a>
+                            <a href="https://music.amazon.com/albums/B0DG231NZN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_FuDo6HWSauZwBQnIZl2uXREHk" target="_blank" class="song-link">Amazon</a>
+                            <a href="https://deezer.page.link/QkbPdtngJttPv9rE7" target="_blank" class="song-link">Deezer</a>
+                        </div>
+                    </div>
+
+                    <div class="streaming-section">
+                        <h4 class="streaming-title">음악 듣기</h4>
+                        <div class="streaming-buttons">
+                            <a href="https://www.melon.com/album/detail.htm?albumId=11586732" target="_blank" class="song-link">멜론</a>
+                            <a href="https://www.music-flo.com/detail/album/428595876/albumtrack" target="_blank" class="song-link">FLO</a>
+                            <a href="https://vibe.naver.com/track/87013102" target="_blank" class="song-link">바이브</a>
+                            <a href="https://music.bugs.co.kr/album/20669005" target="_blank" class="song-link">벅스뮤직</a>
+                            <a href="https://www.genie.co.kr/detail/albumInfo?axnm=85567587" target="_blank" class="song-link">지니뮤직</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Song Card: Unspoken Serenity -->
+                <div class="song-card">
+                    <h3 class="song-title">Unspoken Serenity / 보여주지 않아도 (2023)</h3>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/hgfP1Ia37NQ" title="Unspoken Serenity - YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>Released December 8, 2023</strong></p>
+                        <p>Piano performed by <a href="https://www.hayounglyou.com/" target="_blank" style="color: var(--ink-muted); text-decoration: underline;">Hayoung Lyou</a></p>
+                        <p>Vocal recording by Hwan Shim</p>
+                        <p>Mastered by Seung-jae Kim at OU:RE Studio</p>
+                        <p>All the others by keunwoo.OOO</p>
+                        <p>Album cover art by Hyebin</p>
+                    </div>
+
+                    <div class="streaming-section">
+                        <h4 class="streaming-title">Streaming Services</h4>
+                        <div class="streaming-buttons">
+                            <a href="https://open.spotify.com/track/2Y9nq3tyGnZ1J7nFHp0feA?si=b61507e9113143d5" target="_blank" class="song-link">Spotify</a>
+                            <a href="https://keunwooooo.bandcamp.com/album/unspoken-serenity" target="_blank" class="song-link">Bandcamp</a>
+                            <a href="https://music.apple.com/us/album/unspoken-serenity-single/1770439238" target="_blank" class="song-link">Apple</a>
+                            <a href="https://music.amazon.com/albums/B0CP9ZJMJ8" target="_blank" class="song-link">Amazon</a>
+                            <a href="https://link.deezer.com/s/30BWgCXnJVdgTj1sdnDoD" target="_blank" class="song-link">Deezer</a>
+                        </div>
+                    </div>
+
+                    <div class="streaming-section">
+                        <h4 class="streaming-title">음악 듣기</h4>
+                        <div class="streaming-buttons">
+                            <a href="https://www.melon.com/album/detail.htm?albumId=11380282" target="_blank" class="song-link">멜론</a>
+                            <a href="https://www.music-flo.com/detail/album/419610684/albumtrack" target="_blank" class="song-link">FLO</a>
+                            <a href="https://vibe.naver.com/track/81576372" target="_blank" class="song-link">바이브</a>
+                            <a href="https://music.bugs.co.kr/track/33037685" target="_blank" class="song-link">벅스뮤직</a>
+                            <a href="https://www.genie.co.kr/detail/albumInfo?axnm=84548978" target="_blank" class="song-link">지니뮤직</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Videos Section -->
+    <div class="section-white">
+        <div class="section-content">
+            <h2 class="section-header">My Videos</h2>
+            <div class="songs-grid">
+                <!-- Video Card: memories -->
+                <div class="song-card">
+                    <h3 class="song-title">memories / 기억</h3>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/TeWoRoD-F5s" title="memories (기억) - YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>Unreleased track</strong></p>
+                        <p>Vocals and bass guitar by keunwoo.OOO</p>
+                        <p>Piano and vocals by <a href="https://www.hayounglyou.com/" target="_blank" style="color: var(--ink-muted); text-decoration: underline;">Hayoung Lyou</a></p>
+                        <p>Drums by <a href="https://www.instagram.com/aqldrum/" target="_blank" style="color: var(--ink-muted); text-decoration: underline;">Avery Logan</a></p>
+                        <p>Recorded August 2024, Brooklyn, New York</p>
+                        <p>Other music available at <a href="https://keunwoo.ooo" style="color: var(--ink-muted); text-decoration: underline;">keunwoo.OOO</a></p>
+                    </div>
+                </div>
+
+                <!-- Video Card: resonates -->
+                <div class="song-card">
+                    <h3 class="song-title">resonates / 생각나요</h3>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/nmmBqBSjdak" title="resonates (생각나요) - YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>Unreleased track</strong></p>
+                        <p>Vocals and bass guitar by keunwoo.OOO</p>
+                        <p>Piano and vocals by <a href="https://www.hayounglyou.com/" target="_blank" style="color: var(--ink-muted); text-decoration: underline;">Hayoung Lyou</a></p>
+                        <p>Drums by <a href="https://www.instagram.com/aqldrum/" target="_blank" style="color: var(--ink-muted); text-decoration: underline;">Avery Logan</a></p>
+                        <p>Recorded August 2024, Brooklyn, New York</p>
+                        <p>Other music available at <a href="https://keunwoo.ooo" style="color: var(--ink-muted); text-decoration: underline;">keunwoo.OOO</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remixes Section -->
+    <div class="section-gray">
+        <div class="section-content">
+            <h2 class="section-header">My Remixes</h2>
+            <div class="songs-grid">
+                <!-- Remix Card: NewTerrans -->
+                <div class="song-card">
+                    <h3 class="song-title">NewTerrans</h3>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/SkZidlJkqNk" title="NewTerrans - NewJeans x Starcraft Remix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>NewJeans x Starcraft Remix // 뉴진스 x 스타크래프트 (2022)</strong></p>
+                        
+                    </div>
+                </div>
+
+                <!-- Remix Card: the brownian brownies -->
+                <div class="song-card">
+                    <h3 class="song-title">the brownian brownies 🟫</h3>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/UhFJRbJ5Xus" title="the brownian brownies - IU x Metallica x Dream Theater x Pantera x Tower of Power x Jamiroquai x Mark Ronson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>IU x Metallica x Dream Theater x Pantera x Tower of Power x Jamiroquai x Mark Ronson</strong></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collaborations Section -->
+    <div class="section-white">
+        <div class="section-content">
+            <h2 class="section-header">My Collaborations</h2>
+            <div class="songs-grid">
+                <!-- Collaboration Card: 3AM -->
+                <div class="song-card">
+                    <h3 class="song-title">3AM</h3>
+                    <h4 style="font-size: 1rem; color: var(--ink-muted); margin-bottom: 16px; text-align: center;">by LOST&FOUND (2020)</h4>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/9Bf6kzjbOH8" title="3AM - LOST&FOUND" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>My role: Mixing engineer, bassist, and chorus</strong></p>
+                    </div>
+
+                    <div class="streaming-section">
+                        <h4 class="streaming-title">Streaming Services</h4>
+                        <div class="streaming-buttons">
+                            <a href="https://www.youtube.com/watch?v=9Bf6kzjbOH8" target="_blank" class="song-link">YouTube</a>
+                            <a href="https://open.spotify.com/track/7AwvfesX6PJuHXLFknZS8Z?si=0ed115d0b51d4c19" target="_blank" class="song-link">Spotify</a>
+                            <a href="https://music.apple.com/us/album/3am/1541156559?i=1541156562" target="_blank" class="song-link">Apple</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wife's Music Section -->
+    <div class="section-gray">
+        <div class="section-content">
+            <h2 class="section-header">My Wife's Music</h2>
+            <p style="text-align: center; color: var(--ink-muted); margin-bottom: 24px; font-size: 1rem; line-height: 1.6;">My wife, <a href="https://www.hayounglyou.com/" target="_blank" style="color: var(--ink-muted); text-decoration: underline;">Hayoung Lyou</a>, is an amazing jazz composer and pianist.</p>
+            <div class="songs-grid">
+                <!-- Album Card: The Myth of Katabasis -->
+                <div class="song-card">
+                    <h3 class="song-title">The Myth of Katabasis</h3>
+                    <h4 style="font-size: 1rem; color: var(--ink-muted); margin-bottom: 16px; text-align: center;">by Hayoung Lyou (2024)</h4>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/57W7vd3LkZWRywNlkkwR5A?utm_source=generator" width="100%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>  </strong></p>
+                        <p>9 songs, 43 minutes</p>
+                        <p>Jazz album released November 15, 2024</p>
+                    </div>
+
+                    <div class="streaming-section">
+                        <h4 class="streaming-title">Streaming Services</h4>
+                        <div class="streaming-buttons">
+                            <a href="https://www.youtube.com/watch?v=5nzBavmZM7w&list=PL5fhhkngcGNWGkAwdcQZv_M62JyOpss5g" target="_blank" class="song-link">YouTube</a>
+                            <a href="https://hayounglyou.bandcamp.com/album/the-myth-of-katabasis" target="_blank" class="song-link">Bandcamp</a>
+                            <a href="https://open.spotify.com/album/4MoAT2ZgztBa0PSQ4yMIV3?si=DAdtCOSgTMSRKqFemZ5mKg" target="_blank" class="song-link">Spotify</a>
+                            <a href="https://music.apple.com/us/album/the-myth-of-katabasis/1760003838" target="_blank" class="song-link">Apple</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Performance: Descent Suite -->
+                <div class="song-card">
+                    <h3 class="song-title">Descent Suite Live at IBeam Brooklyn</h3>
+                    <h4 style="font-size: 1rem; color: var(--ink-muted); margin-bottom: 16px; text-align: center;">Part of 'Alone Not Lonely' // 2024 Dec</h4>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/M05nrAjXRiA" title="Descent Suite Live at IBeam Brooklyn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>Live solo piano performance</strong></p>
+                        <p>Descent Suite (I, II, III) from The Myth of Katabasis</p>
+                        <p>IBeam Brooklyn, December 2024</p>
+                    </div>
+                </div>
+
+                <!-- Live Performance: KAIST Workshop -->
+                <div class="song-card">
+                    <h3 class="song-title">유하영의 재즈 워크샵 @ 카이스트</h3>
+                    <h4 style="font-size: 1rem; color: var(--ink-muted); margin-bottom: 16px; text-align: center;">Jazz Workshop at KAIST</h4>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/8km7sxHkvCQ" title="유하영의 재즈 워크샵 @ 카이스트" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>재즈 워크샵 및 연주</strong></p>
+                        <p>KAIST (Daejeon), April 15, 2025</p>
+                        <p>Invited solo jazz piano performance and Q&A</p>
+                    </div>
+                </div>
+
+                <!-- Live Performance: Colorado Boulder -->
+                <div class="song-card">
+                    <h3 class="song-title">Invited Performance at University of Colorado Boulder</h3>
+                    <h4 style="font-size: 1rem; color: var(--ink-muted); margin-bottom: 16px; text-align: center;">Hayoung Lyou Trio // "재즈의 역사"수업 초청공연</h4>
+                    <iframe class="song-player" src="https://www.youtube.com/embed/EIOh_T67yfI" title="Invited Performance at University of Colorado Boulder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <div class="song-metadata">
+                        <p><strong>Hayoung Lyou Trio performance</strong></p>
+                        <p>University of Colorado Boulder, March 2025</p>
+                        <p>Invited performance for "History of Jazz" class</p>
+                        <p>With Seajun Kwon and Zackery Howarth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <footer>
             <div class="social-links">
